@@ -316,6 +316,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.3)
   rmagick
+  ruby-vips
   selenium-webdriver
   simple_form
   sprockets-rails

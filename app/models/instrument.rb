@@ -1,6 +1,12 @@
 class Instrument < ApplicationRecord
-    mount_uploader :image, ImageUploader
-    serialize :image, JSON
+    
+    has_one_attached :image
+    has_many :line_items
+
+    
+    def image_as_thumbnail
+      image.variant(resize_to_limit: [300, 300]).processed
+    end
 
     belongs_to :user, optional: true
 
